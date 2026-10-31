@@ -16,6 +16,8 @@ Open `http://127.0.0.1:4173`.
 
 ## Publish
 
-The site is intended for GitHub Pages. Push the repository to GitHub, then
-enable Pages from **Settings → Pages → GitHub Actions**. The included workflow
-publishes the root static files on every push to `main`.
+The gallery is published at
+[`https://kalashree225.github.io/`](https://kalashree225.github.io/) from the
+[`kalashree225.github.io`](https://github.com/kalashree225/kalashree225.github.io)
+repository. The included workflow is also available for project-site
+deployments when GitHub Actions Pages is enabled.
