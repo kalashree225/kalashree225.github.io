@@ -43,8 +43,8 @@
       </section>
 
       <section class="signal-strip" aria-label="Atlas summary">
-        <div><strong>26</strong><span>skills in view</span></div>
-        <div><strong>06</strong><span>skill families</span></div>
+        <div><strong id="skillCount">26</strong><span>skills in view</span></div>
+        <div><strong>07</strong><span>working fields</span></div>
         <div><strong>01</strong><span>good first prompt</span></div>
         <p>Start with the outcome. Name the work. Let the skill do the routing.</p>
       </section>
@@ -64,6 +64,17 @@
           <button class="filter-button" data-filter="write" type="button">Write</button>
           <button class="filter-button" data-filter="inspect" type="button">Inspect</button>
           <button class="filter-button" data-filter="learn" type="button">Learn</button>
+        </div>
+        <div class="field-row" role="group" aria-label="Filter skills by working field">
+          <span class="field-label">Field</span>
+          <button class="field-button is-active" data-field="all" type="button">Any field</button>
+          <button class="field-button" data-field="agents" type="button">Agents</button>
+          <button class="field-button" data-field="frontend" type="button">Frontend</button>
+          <button class="field-button" data-field="documents" type="button">Documents</button>
+          <button class="field-button" data-field="visual" type="button">Visual</button>
+          <button class="field-button" data-field="data" type="button">Data</button>
+          <button class="field-button" data-field="research" type="button">Research</button>
+          <button class="field-button" data-field="comms" type="button">Comms</button>
         </div>
         <div class="skill-grid" id="skillGrid"></div>
       </section>
