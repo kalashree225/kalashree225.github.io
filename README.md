@@ -14,6 +14,19 @@ python -m http.server 4173
 
 Open `http://127.0.0.1:4173`.
 
+## Install a skill and invoke it
+
+Run the included PowerShell bridge script from this folder:
+
+```powershell
+.\install-skill.ps1 -SkillName frontend-design
+```
+
+Then restart Copilot and start a new chat. To invoke a skill explicitly, type
+its slash command in the composer, such as `/frontend-design` or
+`/webapp-testing`. The gallery's **Install bridge** and **Use /skill-name**
+buttons copy these commands for you.
+
 ## Publish
 
 The gallery is published at

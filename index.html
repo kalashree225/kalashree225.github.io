@@ -76,7 +76,19 @@
           <button class="field-button" data-field="research" type="button">Research</button>
           <button class="field-button" data-field="comms" type="button">Comms</button>
         </div>
+        <div class="command-deck" aria-label="Skill command deck">
+          <div class="command-deck-copy">
+            <p class="eyebrow">The command deck</p>
+            <h3>Find it. Invoke it. Bridge it.</h3>
+            <p>Search a skill to get the Copilot slash command and the Windows junction command that exposes a local skill to the app.</p>
+          </div>
+          <label class="command-search">
+            <span>Search commands</span>
+            <input id="skillSearch" type="search" placeholder="Try “PDF” or “frontend”" autocomplete="off" />
+          </label>
+        </div>
         <div class="skill-grid" id="skillGrid"></div>
+        <p class="empty-state" id="emptyState" hidden>No skills match that combination. Clear one filter or try another search.</p>
       </section>
 
       <section class="ritual-section" id="ritual" aria-labelledby="ritual-title">

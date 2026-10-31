@@ -28,10 +28,17 @@ const skills = [
 ];
 
 const grid = document.querySelector("#skillGrid");
+const emptyState = document.querySelector("#emptyState");
+const searchInput = document.querySelector("#skillSearch");
 const categoryLabels = { build: "Build", make: "Make", write: "Write", inspect: "Inspect", learn: "Learn" };
 const fieldLabels = { agents: "Agents", frontend: "Frontend", documents: "Documents", visual: "Visual", data: "Data", research: "Research", comms: "Comms" };
-function render(filter = "all", field = "all") {
-  const visible = skills.filter(([, family, skillField]) => (filter === "all" || family === filter) && (field === "all" || skillField === field));
+function render(filter = "all", field = "all", search = "") {
+  const query = search.trim().toLowerCase();
+  const visible = skills.filter(([name, family, skillField, title, description, prompt]) => {
+    const matchesFilters = (filter === "all" || family === filter) && (field === "all" || skillField === field);
+    const searchable = `${name} ${title} ${description} ${prompt} ${skillField}`.toLowerCase();
+    return matchesFilters && (!query || searchable.includes(query));
+  });
   grid.innerHTML = visible.map(([name, family, skillField, title, description, prompt], index) => `
     <article class="skill-card">
       <div>
@@ -40,8 +47,25 @@ function render(filter = "all", field = "all") {
         <p>${description}</p>
       </div>
       <div class="skill-prompt">Try: “${prompt}”</div>
+      <div class="skill-commands">
+        <button class="command-button" data-copy="/${name}" type="button">Use /${name}</button>
+        <button class="command-button" data-copy=".\\install-skill.ps1 -SkillName ${name}" type="button">Install bridge</button>
+      </div>
     </article>
   `).join("");
+  emptyState.hidden = visible.length > 0;
+  grid.querySelectorAll("[data-copy]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(button.dataset.copy);
+        const original = button.textContent;
+        button.textContent = "Copied";
+        window.setTimeout(() => { button.textContent = original; }, 1200);
+      } catch {
+        button.textContent = "Copy unavailable";
+      }
+    });
+  });
 }
 render();
 let activeCategory = "all";
@@ -51,7 +75,7 @@ document.querySelectorAll(".filter-button").forEach((button) => {
     document.querySelectorAll(".filter-button").forEach((item) => item.classList.remove("is-active"));
     button.classList.add("is-active");
     activeCategory = button.dataset.filter;
-    render(activeCategory, activeField);
+    render(activeCategory, activeField, searchInput.value);
   });
 });
 document.querySelectorAll(".field-button").forEach((button) => {
@@ -59,9 +83,10 @@ document.querySelectorAll(".field-button").forEach((button) => {
     document.querySelectorAll(".field-button").forEach((item) => item.classList.remove("is-active"));
     button.classList.add("is-active");
     activeField = button.dataset.field;
-    render(activeCategory, activeField);
+    render(activeCategory, activeField, searchInput.value);
   });
 });
+searchInput.addEventListener("input", () => render(activeCategory, activeField, searchInput.value));
 const starterPrompt = "Use the frontend-design skill to make this page feel authored, not assembled. Preserve the existing content hierarchy, keep the API unchanged, and run the relevant checks when you're done.";
 document.querySelector("#copyStarter").addEventListener("click", async () => {
   try {

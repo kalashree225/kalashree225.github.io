@@ -136,6 +136,32 @@ instead of adding a personal key.
 
 ## How to use skills effectively
 
+### Install or bridge one skill
+
+From the Skill Atlas repository folder, run:
+
+```powershell
+.\install-skill.ps1 -SkillName frontend-design
+```
+
+Replace `frontend-design` with the skill folder name. The script validates that
+the source contains `SKILL.md`, creates a Windows directory junction under
+`C:\Users\<you>\.copilot\skills`, and refuses to overwrite a real directory.
+After installing, restart Copilot and start a new chat.
+
+### Slash commands
+
+Use a skill explicitly in the Copilot composer by typing its slash command:
+
+```text
+/frontend-design
+/web-design-guidelines
+/mcp-builder
+```
+
+The command is the skill folder name prefixed with `/`. If a skill is not
+manual-only, Copilot may also discover it automatically from the task.
+
 ### 1. State the outcome
 
 Give the app the result you want, not only the tool or skill name:
@@ -265,4 +291,3 @@ Do not delete the original `.agents\skills` directory as part of rollback.
 - [ ] Start a new chat.
 - [ ] Select a Claude model in the composer.
 - [ ] Run one small skill-matching test.
-
