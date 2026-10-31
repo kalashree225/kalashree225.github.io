@@ -15,6 +15,7 @@
     <header class="site-header">
       <a class="wordmark" href="#top" aria-label="Skill Atlas home"><span>SKILL</span><em>ATLAS</em></a>
       <nav aria-label="Primary navigation">
+        <a href="#exhibition">Exhibition</a>
         <a href="#gallery">Gallery</a>
         <a href="#workflows">Workflows</a>
         <a href="#ritual">How to use it</a>
@@ -48,6 +49,44 @@
         <div><strong>07</strong><span>working fields</span></div>
         <div><strong>01</strong><span>good first prompt</span></div>
         <p>Start with the outcome. Name the work. Let the skill do the routing.</p>
+      </section>
+
+      <section class="exhibition-section" id="exhibition" aria-labelledby="exhibition-title">
+        <div class="exhibition-heading">
+          <div>
+            <p class="eyebrow">The exhibition</p>
+            <h2 id="exhibition-title">See the work<br /><span>before</span> you invoke it.</h2>
+          </div>
+          <p>Seven fields. Seven different ways of making something real. The atlas is a collection of practices, not a pile of commands.</p>
+        </div>
+        <div class="exhibition-grid">
+          <button class="exhibit-tile exhibit-agents" data-exhibit-field="agents" type="button">
+            <span class="tile-index">01 / agents</span><strong>Systems that can act.</strong><i class="tile-visual visual-network" aria-hidden="true"><b></b><b></b><b></b><b></b></i><span class="tile-caption">runtime · tools · trace</span>
+          </button>
+          <button class="exhibit-tile exhibit-frontend" data-exhibit-field="frontend" type="button">
+            <span class="tile-index">02 / frontend</span><strong>Interfaces with a point of view.</strong><i class="tile-visual visual-window" aria-hidden="true"><b></b><b></b><b></b></i><span class="tile-caption">hierarchy · motion · proof</span>
+          </button>
+          <button class="exhibit-tile exhibit-documents" data-exhibit-field="documents" type="button">
+            <span class="tile-index">03 / documents</span><strong>Structure that survives export.</strong><i class="tile-visual visual-pages" aria-hidden="true"><b></b><b></b><b></b></i><span class="tile-caption">draft · format · validate</span>
+          </button>
+          <button class="exhibit-tile exhibit-visual" data-exhibit-field="visual" type="button">
+            <span class="tile-index">04 / visual</span><strong>A brief made visible.</strong><i class="tile-visual visual-orbit" aria-hidden="true"><b></b></i><span class="tile-caption">mood · medium · export</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="workbench-section" id="workbench" aria-labelledby="workbench-title">
+        <div class="workbench-intro">
+          <p class="eyebrow">The workbench</p>
+          <h2 id="workbench-title">Compose a<br /><span>working brief.</span></h2>
+          <p>Choose the kind of work, add its boundary, and leave with a prompt that routes across the atlas instead of guessing at one skill.</p>
+        </div>
+        <div class="workbench-panel">
+          <label><span>What are you making?</span><select id="workbenchField"><option value="frontend">A web interface</option><option value="agents">An agent workflow</option><option value="documents">A document or deck</option><option value="visual">A visual artifact</option><option value="data">A trustworthy spreadsheet</option><option value="research">A researched answer</option><option value="comms">A clear update</option></select></label>
+          <label><span>What must stay true?</span><input id="workbenchConstraint" value="Keep the existing structure stable and show your checks." /></label>
+          <div class="workbench-route"><span>Suggested route</span><strong id="workbenchRoute">frontend-design → web-artifacts-builder → webapp-testing</strong></div>
+          <div class="workbench-output"><p class="eyebrow">Ready to paste</p><p id="workbenchPrompt">Use frontend-design to shape a web interface with a distinct visual direction. Then use web-artifacts-builder to build the interaction and webapp-testing to verify the real user path. Keep the existing structure stable and show your checks.</p><button class="command-button" id="copyWorkbench" type="button">Copy working brief</button></div>
+        </div>
       </section>
 
       <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">

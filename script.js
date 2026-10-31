@@ -85,6 +85,15 @@ const resultStatus = document.querySelector("#resultStatus");
 const searchInput = document.querySelector("#skillSearch");
 const categoryLabels = { build: "Build", make: "Make", write: "Write", inspect: "Inspect", learn: "Learn" };
 const fieldLabels = Object.fromEntries(Object.entries(fieldMeta).map(([key, value]) => [key, value.label]));
+const fieldRoutes = {
+  agents: ["claude-api", "mcp-builder", "cline-sdk"],
+  frontend: ["frontend-design", "web-artifacts-builder", "webapp-testing"],
+  documents: ["doc-coauthoring", "docx", "pdf"],
+  visual: ["visual-design-studio", "canvas-design", "theme-factory"],
+  data: ["xlsx"],
+  research: ["find-skills", "context-map", "discernment-nudge"],
+  comms: ["internal-comms"],
+};
 let activeCategory = "all";
 let activeField = "all";
 let selectedSkill = null;
@@ -113,7 +122,7 @@ function render(filter = activeCategory, field = activeField, search = searchInp
     return matchesFilters && (!query || searchable.includes(query));
   });
   grid.innerHTML = visible.map((skill, index) => `
-    <article class="skill-card" data-skill="${skill.name}">
+    <article class="skill-card field-${skill.field}" data-skill="${skill.name}">
       <div>
         <div class="skill-top"><span class="skill-index">${String(index + 1).padStart(2, "0")}</span><span class="skill-family">${categoryLabels[skill.family]} / ${fieldLabels[skill.field]}</span></div>
         <h3>${skill.name}</h3>
@@ -155,6 +164,15 @@ function renderWorkflows() {
     document.querySelector("#gallery").scrollIntoView({ behavior: "smooth", block: "start" });
     render();
   }));
+}
+
+function renderWorkbench(field = document.querySelector("#workbenchField").value) {
+  const route = fieldRoutes[field] || [];
+  const constraint = document.querySelector("#workbenchConstraint").value.trim() || "Keep the work legible and show your checks.";
+  const routeText = route.join(" → ");
+  const label = fieldLabels[field] || "selected field";
+  document.querySelector("#workbenchRoute").textContent = routeText;
+  document.querySelector("#workbenchPrompt").textContent = `Use ${route[0] || "the right skill"} to start this ${label.toLowerCase()} task. Then route the work through ${route.slice(1).join(" and ") || "a verification pass"}. ${constraint}`;
 }
 
 function openSkill(name) {
@@ -202,6 +220,18 @@ document.querySelector("#skillDialog").addEventListener("click", (event) => {
 document.querySelector("#dialogCopy").addEventListener("click", (event) => copyText(selectedSkill?.prompt || "", event.currentTarget));
 document.querySelector("#dialogInvoke").addEventListener("click", (event) => copyText(`/${selectedSkill?.name || ""}`, event.currentTarget, "Copy slash command"));
 document.querySelector("#dialogInstall").addEventListener("click", (event) => copyText(`.\\install-skill.ps1 -SkillName ${selectedSkill?.name || ""}`, event.currentTarget, "Copy bridge command"));
+document.querySelector("#workbenchField").addEventListener("change", (event) => renderWorkbench(event.target.value));
+document.querySelector("#workbenchConstraint").addEventListener("input", () => renderWorkbench());
+document.querySelector("#copyWorkbench").addEventListener("click", (event) => copyText(document.querySelector("#workbenchPrompt").textContent, event.currentTarget));
+document.querySelectorAll("[data-exhibit-field]").forEach((tile) => tile.addEventListener("click", () => {
+  activeField = tile.dataset.exhibitField;
+  document.querySelectorAll(".field-button").forEach((item) => {
+    item.classList.toggle("is-active", item.dataset.field === activeField);
+    item.setAttribute("aria-pressed", item.dataset.field === activeField);
+  });
+  document.querySelector("#gallery").scrollIntoView({ behavior: "smooth", block: "start" });
+  render();
+}));
 
 const starterPrompt = "Use the frontend-design skill to make this page feel authored, not assembled. Preserve the existing content hierarchy, keep the API unchanged, and run the relevant checks when you're done.";
 document.querySelector("#copyStarter").addEventListener("click", (event) => copyText(starterPrompt, event.currentTarget, "Copy a starter prompt ⌘"));
@@ -220,6 +250,7 @@ document.querySelectorAll(".field-button").forEach((button) => {
 });
 
 renderWorkflows();
+renderWorkbench();
 render();
 
 const typedPrompt = document.querySelector("#typedPrompt");
