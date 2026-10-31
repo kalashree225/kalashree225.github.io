@@ -97,6 +97,8 @@ const fieldRoutes = {
 let activeCategory = "all";
 let activeField = "all";
 let selectedSkill = null;
+let catalogueStatuses = {};
+let activeStatus = "all";
 
 function copyText(value, button, original = button.textContent) {
   navigator.clipboard.writeText(value).then(() => {
@@ -117,14 +119,14 @@ function updateUrl() {
 function render(filter = activeCategory, field = activeField, search = searchInput.value) {
   const query = search.trim().toLowerCase();
   const visible = skills.filter((skill) => {
-    const matchesFilters = (filter === "all" || skill.family === filter) && (field === "all" || skill.field === field);
+    const matchesFilters = (filter === "all" || skill.family === filter) && (field === "all" || skill.field === field) && (activeStatus === "all" || catalogueStatuses[skill.name] === activeStatus);
     const searchable = `${skill.name} ${skill.title} ${skill.description} ${skill.prompt} ${skill.field}`.toLowerCase();
     return matchesFilters && (!query || searchable.includes(query));
   });
   grid.innerHTML = visible.map((skill, index) => `
     <article class="skill-card field-${skill.field}" data-skill="${skill.name}">
       <div>
-        <div class="skill-top"><span class="skill-index">${String(index + 1).padStart(2, "0")}</span><span class="skill-family">${categoryLabels[skill.family]} / ${fieldLabels[skill.field]}</span></div>
+        <div class="skill-top"><span class="skill-index">${String(index + 1).padStart(2, "0")}</span><span class="skill-family"><span class="status-dot status-${catalogueStatuses[skill.name] || "missing"}"></span>${categoryLabels[skill.family]} / ${fieldLabels[skill.field]}</span></div>
         <h3>${skill.name}</h3>
         <p>${skill.description}</p>
       </div>
@@ -208,6 +210,12 @@ document.querySelectorAll(".field-button").forEach((button) => {
       item.classList.toggle("is-active", item === button);
       item.setAttribute("aria-pressed", item === button);
     });
+
+    document.querySelectorAll("[data-status-filter]").forEach((button) => button.addEventListener("click", () => {
+      activeStatus = activeStatus === button.dataset.statusFilter ? "all" : button.dataset.statusFilter;
+      document.querySelectorAll("[data-status-filter]").forEach((item) => item.classList.toggle("is-active", item === button && activeStatus !== "all"));
+      render();
+    }));
     render();
   });
 });
@@ -252,6 +260,25 @@ document.querySelectorAll(".field-button").forEach((button) => {
 renderWorkflows();
 renderWorkbench();
 render();
+
+fetch("data/catalogue.json")
+  .then((response) => response.ok ? response.json() : Promise.reject(new Error("catalogue unavailable")))
+  .then((catalogue) => {
+    catalogueStatuses = Object.fromEntries(catalogue.skills.map((skill) => [skill.id, skill.status]));
+    const counts = catalogue.statusCounts || {};
+    document.querySelector("#skillCount").textContent = catalogue.skills.length;
+    document.querySelector("#okCount").textContent = counts.ok || 0;
+    document.querySelector("#staleCount").textContent = counts.stale || 0;
+    document.querySelector("#brokenCount").textContent = counts.broken || 0;
+    document.querySelector("#driftCount").textContent = counts.drift || 0;
+    document.querySelector("#catalogueMode").textContent = "generated snapshot";
+    document.querySelector("#syncSummary").textContent = `synced ${new Date(catalogue.generatedAt).toLocaleString()} · ${catalogue.roots.filter((root) => root.exists).length} root connected`;
+    render();
+  })
+  .catch(() => {
+    document.querySelector("#syncSummary").textContent = "bridge offline · static mode";
+    document.querySelector("#catalogueMode").textContent = "static fallback";
+  });
 
 const typedPrompt = document.querySelector("#typedPrompt");
 const prompt = "use frontend-design";

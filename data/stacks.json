@@ -1,0 +1,6 @@
+[
+  { "id": "frontend-light", "name": "Frontend Light", "tier": "light", "skillIds": ["frontend-design", "webapp-testing"], "notes": "Shape a surface, then prove the main path." },
+  { "id": "frontend-strong", "name": "Frontend Strong", "tier": "strong", "skillIds": ["frontend-design", "web-artifacts-builder", "webapp-testing", "web-design-guidelines"], "notes": "Build, review, and test a production-facing interface." },
+  { "id": "ai-strong", "name": "AI / LLM Strong", "tier": "strong", "skillIds": ["claude-api", "mcp-builder", "skill-creator"], "notes": "Compose a provider-aware tool surface and package the workflow." },
+  { "id": "documents-light", "name": "Documents Light", "tier": "light", "skillIds": ["doc-coauthoring", "pdf"], "notes": "Draft and validate a document deliverable." }
+]

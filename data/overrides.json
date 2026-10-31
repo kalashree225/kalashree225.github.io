@@ -1,0 +1,8 @@
+{
+  "frontend-design": { "featured": "hero", "field": "frontend", "related": ["impeccable", "webapp-testing"] },
+  "visual-design-studio": { "featured": "hero", "field": "visual", "related": ["theme-factory", "canvas-design"] },
+  "mcp-builder": { "featured": "standard", "field": "agents", "tier": "strong" },
+  "skill-creator": { "featured": "standard", "field": "agents", "tier": "strong" },
+  "xlsx": { "featured": "standard", "field": "data", "tier": "light" },
+  "internal-comms": { "featured": "standard", "field": "comms", "tier": "light" }
+}

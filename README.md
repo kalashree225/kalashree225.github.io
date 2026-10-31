@@ -27,6 +27,34 @@ its slash command in the composer, such as `/frontend-design` or
 `/webapp-testing`. The gallery's **Install bridge** and **Use /skill-name**
 buttons copy these commands for you.
 
+## Generated catalogue and local bridge
+
+The static page reads `data/catalogue.json`, generated from real `SKILL.md`
+files under the configured roots. The catalogue is never hand-edited; curated
+metadata belongs in `data/overrides.json`.
+
+```powershell
+npm run sync
+npm run doctor
+npm run stack:plan -- frontend-strong
+```
+
+An optional read-only localhost bridge exposes health, catalogue, source, and
+dry-run install-plan endpoints. It binds to `127.0.0.1` and requires the
+printed token for rescan requests:
+
+```powershell
+npm run bridge
+Invoke-RestMethod http://127.0.0.1:4174/health
+Invoke-RestMethod -Method Post http://127.0.0.1:4174/install `
+  -ContentType 'application/json' `
+  -Body '{"stackId":"frontend-light","agent":"claude-code","mode":"dry-run"}'
+```
+
+The bridge never executes files from a skill folder and never applies an
+install directly; use the existing `install-skill.ps1` bridge after reviewing
+the dry-run plan.
+
 ## Publish
 
 The gallery is published at

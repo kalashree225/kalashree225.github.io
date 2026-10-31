@@ -1,0 +1,1153 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-31T09:05:26.315Z",
+  "platform": "win32",
+  "skills": [
+    {
+      "id": "academy-guide",
+      "name": "Claude Academy guide",
+      "field": "research",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "Stop and check this skill before finishing any reply to a question about how",
+      "useWhen": "When the task is about research.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/academy-guide.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "102ce9bf7624e88c",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 7902
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "algorithmic-art",
+      "name": "algorithmic-art",
+      "field": "visual",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about visual.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/algorithmic-art.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "6688fc81bb2051d3",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 20173
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "brand-guidelines",
+      "name": "Anthropic Brand Styling",
+      "field": "research",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about research.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/brand-guidelines.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "a0aa0a21ebf9e851",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 2308
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "canvas-design",
+      "name": "canvas-design",
+      "field": "visual",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about visual.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/canvas-design.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "7bebc4a2cf108c55",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 12068
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "claude-api",
+      "name": "Building LLM-Powered Applications with Claude",
+      "field": "agents",
+      "stack": "ai",
+      "tier": "strong",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.",
+      "useWhen": "When the task is about agents.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/claude-api.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "8e75de73fc857049",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 105762
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "cline-sdk",
+      "name": "Cline SDK Skill",
+      "field": "agents",
+      "stack": "ai",
+      "tier": "strong",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "Consolidated skill for building AI agents with the Cline SDK. Use the decision trees below to find the right entry point and API surface, then load detailed references.",
+      "useWhen": "When the task is about agents.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/cline-sdk.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "45b23e5dd30a1c1f",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 10926
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "discernment-nudge",
+      "name": "Discernment nudge",
+      "field": "research",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "After you give a substantive answer or draft that the user may act on",
+      "useWhen": "When the task is about research.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/discernment-nudge.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "8e498a6c417b707a",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 10801
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "doc-coauthoring",
+      "name": "Doc Co-Authoring Workflow",
+      "field": "documents",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "- User mentions writing documentation: \"write a doc\", \"draft a proposal\", \"create a spec\", \"write up\"",
+      "useWhen": "When the task is about documents.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/doc-coauthoring.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "acb9b89b228fb818",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 16190
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "docx",
+      "name": "DOCX creation, editing, and analysis",
+      "field": "documents",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Proprietary. LICENSE.txt has complete terms",
+      "useWhen": "When the task is about documents.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/docx.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "ffd82aa6a49674c0",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 7002
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "find-skills",
+      "name": "Find Skills",
+      "field": "research",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "This skill helps you discover and install skills from the open agent skills ecosystem.",
+      "useWhen": "When the task is about research.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/find-skills.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "c00eeea0e13e74fe",
+          "status": "stale"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 5472
+      },
+      "status": "stale",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "frontend-design",
+      "name": "Frontend Design",
+      "field": "frontend",
+      "stack": "frontend",
+      "tier": "strong",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about frontend.",
+      "featured": "hero",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [
+        "impeccable",
+        "webapp-testing"
+      ],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/frontend-design.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "b8009ae690dfa69e",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 9461
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "internal-comms",
+      "name": "internal-comms",
+      "field": "comms",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about comms.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/internal-comms.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "c5c061ab25b33fab",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 1543
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "mcp-builder",
+      "name": "MCP Server Development Guide",
+      "field": "agents",
+      "stack": "ai",
+      "tier": "strong",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about agents.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/mcp-builder.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "323a42dcf2bd27b8",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 11381
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "pdf",
+      "name": "PDF Processing Guide",
+      "field": "documents",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Proprietary. LICENSE.txt has complete terms",
+      "useWhen": "When the task is about documents.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/pdf.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "067401220db5745f",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 8386
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "pptx",
+      "name": "PPTX creation, editing, and analysis",
+      "field": "documents",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Proprietary. LICENSE.txt has complete terms",
+      "useWhen": "When the task is about documents.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/pptx.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "d11d1c5e9f8cf7cd",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 21034
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "skill-creator",
+      "name": "Skill Creator",
+      "field": "agents",
+      "stack": "ai",
+      "tier": "strong",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "A skill for creating new skills and iteratively improving them.",
+      "useWhen": "When the task is about agents.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/skill-creator.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "e030e7685e26283b",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 33653
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "slack-gif-creator",
+      "name": "Slack GIF Creator",
+      "field": "research",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about research.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/slack-gif-creator.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "561c85ffeab639a1",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 8095
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "template-skill",
+      "name": "Insert instructions below",
+      "field": "research",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "description: Replace with description of the skill and when Claude should use it.",
+      "useWhen": "When the task is about research.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/template-skill.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "bc3548bb6225e301",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 146
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "theme-factory",
+      "name": "Theme Factory Skill",
+      "field": "visual",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about visual.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/theme-factory.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "7c765e6626bf61ec",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 3183
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "visual-design-studio",
+      "name": "Visual Design Studio",
+      "field": "visual",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about visual.",
+      "featured": "hero",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [
+        "theme-factory",
+        "canvas-design"
+      ],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/visual-design-studio.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "1eaa1d6a2819331f",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 9722
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "web-artifacts-builder",
+      "name": "Web Artifacts Builder",
+      "field": "frontend",
+      "stack": "frontend",
+      "tier": "strong",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about frontend.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/web-artifacts-builder.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "fed403699c30a8df",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 3160
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "webapp-testing",
+      "name": "Web Application Testing",
+      "field": "frontend",
+      "stack": "frontend",
+      "tier": "strong",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Complete terms in LICENSE.txt",
+      "useWhen": "When the task is about frontend.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/webapp-testing.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "8bc27790f6e6dfc2",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 4008
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    },
+    {
+      "id": "xlsx",
+      "name": "XLSX creation, editing, and analysis",
+      "field": "data",
+      "tier": "light",
+      "inferred": [
+        "field",
+        "family",
+        "tier"
+      ],
+      "description": "license: Proprietary. LICENSE.txt has complete terms",
+      "useWhen": "When the task is about data.",
+      "featured": "standard",
+      "inputs": [
+        "task goal",
+        "constraints"
+      ],
+      "outputs": [
+        "guided result"
+      ],
+      "tools": [],
+      "sideEffects": [
+        "may create or edit files"
+      ],
+      "related": [],
+      "examples": [],
+      "preview": {
+        "type": "code",
+        "src": "previews/xlsx.svg"
+      },
+      "installs": [
+        {
+          "agent": "claude-code",
+          "path": "C:\\Users\\FMVPP\\.agents\\skills",
+          "linkType": "dir",
+          "hash": "111e06521941d60f",
+          "status": "ok"
+        }
+      ],
+      "weight": {
+        "files": 1,
+        "bytes": 8697
+      },
+      "status": "ok",
+      "warnings": [],
+      "version": "local",
+      "lastVerified": "2026-10-31T09:05:26.315Z"
+    }
+  ],
+  "roots": [
+    {
+      "agent": "claude-code",
+      "path": "C:\\Users\\FMVPP\\.agents\\skills",
+      "exists": true
+    },
+    {
+      "agent": "codex",
+      "path": "C:\\Users\\FMVPP\\.codex\\skills",
+      "exists": true
+    },
+    {
+      "agent": "antigravity",
+      "path": "C:\\Users\\FMVPP\\.antigravity\\skills",
+      "exists": false
+    },
+    {
+      "agent": "kiro",
+      "path": "C:\\Users\\FMVPP\\.kiro\\skills",
+      "exists": true
+    }
+  ],
+  "statusCounts": {
+    "ok": 22,
+    "stale": 1
+  },
+  "warnings": [
+    "Missing root: antigravity C:\\Users\\FMVPP\\.antigravity\\skills"
+  ]
+}

@@ -51,6 +51,15 @@
         <p>Start with the outcome. Name the work. Let the skill do the routing.</p>
       </section>
 
+      <section class="trust-bar" aria-label="Catalogue health">
+        <div class="trust-heading"><span class="trust-pulse"></span><strong>Trust bar</strong><span id="catalogueMode">static catalogue</span></div>
+        <button class="trust-chip" data-status-filter="ok" type="button"><span class="status-dot status-ok"></span><strong id="okCount">—</strong> ok</button>
+        <button class="trust-chip" data-status-filter="stale" type="button"><span class="status-dot status-stale"></span><strong id="staleCount">—</strong> stale</button>
+        <button class="trust-chip" data-status-filter="broken" type="button"><span class="status-dot status-broken"></span><strong id="brokenCount">—</strong> broken</button>
+        <button class="trust-chip" data-status-filter="drift" type="button"><span class="status-dot status-drift"></span><strong id="driftCount">—</strong> drift</button>
+        <span class="trust-sync" id="syncSummary">waiting for catalogue…</span>
+      </section>
+
       <section class="exhibition-section" id="exhibition" aria-labelledby="exhibition-title">
         <div class="exhibition-heading">
           <div>
